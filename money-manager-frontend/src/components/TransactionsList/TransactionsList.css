@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+
+.trans-container {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #d2d2d2;
+  padding-top: 10px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.transaction {
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 5px 0px;
+}
+
+.content {
+  margin: 10px 0px;
+  padding-left: 10px;
+}
+
+.amount {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+}
+
+.amount p {
+  margin: 10px 0px;
+}
+
+.add-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.input-container {
+  background-color: #ffffff;
+  border: 1px solid #d2d2d2;
+  margin: 5px 0px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#add-button {
+  margin: 10px 0px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  color: #ffff;
+  background-color: #312D2D;
+  outline: none;
+}
+
+#add-button:focus {
+  outline: none;
+}
+
+.plus {
+  color: #41d3e0;
+}
+
+.plus::before {
+  content: "+"
+}
+
+.plus:after, .minus::after {
+  content: " THB";
+  font-size: small;
+}
+
+.minus {
+  color: #f26e41;
+}
+
+#transaction {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.remove {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.remove:hover {
+  cursor: pointer;
+  background-color: #f26e41;
+  color: #ffff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+} 
