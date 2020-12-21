@@ -5,7 +5,6 @@ import LocalStorageService from '../services/localStorageService'
 import jwtDecode from 'jwt-decode';
 import TransactionsList from '../components/TransactionsList/TransactionsList';
 import Statistic from '../components/Statistic/Statistic';
-import Data from './Data';
 import './Manage.css';
 
 const Manage = props => {
@@ -33,7 +32,7 @@ const Manage = props => {
 
   useEffect(() => {
     getTransactionFromBackend();
-  }, []);
+  }, [transactions]);
 
   return (    
     <>

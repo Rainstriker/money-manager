@@ -5,6 +5,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     amount: {
       type: DataTypes.FLOAT
+    },
+    category: {
+      type: DataTypes.STRING(30)
     }
   }, {
     tableName: 'transactions',

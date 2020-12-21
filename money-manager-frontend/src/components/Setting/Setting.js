@@ -20,7 +20,7 @@ const Setting = props => {
   const menu = (
     <Menu>
       <Menu.Item>
-        <ModalForm form={<UpdateUser />} button={true} style2={true} title='Update profile' des='Update profile'/>
+        <ModalForm form={<UpdateUser name={props.name} />} button={true} style2={true} title='Update profile' des='Update profile'/>
       </Menu.Item>
       <Menu.Item>
         <ModalForm form={<UpdatePassword />} button={true} style2={true} title='Update password' des='Update password'/>

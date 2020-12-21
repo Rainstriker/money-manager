@@ -49,6 +49,10 @@ const Backend = {
     return await axios.get('transactions/');
   },
 
+  async getTansactionsByCategory(requestBody) {
+    return await axios.get('transactions/category', qs.stringify(requestBody));
+  },
+
   // Transaction POST method  
   async addTransaction(requestBody) {
     return await axios.post('transactions/add', qs.stringify(requestBody));

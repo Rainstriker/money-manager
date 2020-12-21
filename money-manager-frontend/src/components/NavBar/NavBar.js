@@ -7,7 +7,7 @@ const NavBar = props => {
       return (
         <div style={{width: '30vh', display: 'flex', justifyContent: 'flex-end'}}>
           <p style={{fontSize: 14, fontFamily: 'Roboto', paddingRight: 15 }}>{props.name}</p>
-          <Setting setRole={props.setRole}/>
+          <Setting name={props.name} setRole={props.setRole}/>
         </div>
       );
     } else {

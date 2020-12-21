@@ -1,7 +1,7 @@
 import React from 'react';
-import { Form, Input, Button, InputNumber } from 'antd';
-
 import Backend from '../../util/Backend';
+import { Form, Input, Button, InputNumber, Select } from 'antd';
+const { Option } = Select;
 
 const layout = {
   labelCol: {
@@ -16,11 +16,11 @@ const AddTransaction = props => {
   const onFinish = (values) => {
     const body = {
       name: values.name,
+      category: values.category,
       amount: values.amount,
     };
     Backend.addTransaction(body
-      ).then(props.refresh
-        ).catch(err => console.log(err));
+      ).then(props.refresh).catch(err => console.log(err));
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -47,8 +47,33 @@ const AddTransaction = props => {
           },
         ]} 
         className='input-container'>
-        <Input id='content-input'/>
+        <Input id='content-input' placeholder="salary, fried chicken, smartphone and etc."/>
       </Form.Item>
+      <Form.Item
+          name="category"
+          label="Category"
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+          className='input-container'
+        >
+          <Select
+            placeholder="Select a category"
+            allowClear
+          >
+            <Option value="Food">Food</Option>
+            <Option value="Social">Social</Option>
+            <Option value="Household">Household</Option>
+            <Option value="Transportation">Transportation</Option>
+            <Option value="Entertainment">Entertainment</Option>
+            <Option value="Health">Health</Option>
+            <Option value="Apparel">Apparel</Option>
+            <Option value="Education">Education</Option>
+            <Option value="Beauty">Beauty</Option>
+          </Select>
+        </Form.Item>
       <Form.Item 
         label="Amount"
         name="amount"
@@ -59,7 +84,7 @@ const AddTransaction = props => {
           },
         ]}
         className='input-container'>
-        <InputNumber/>
+        <InputNumber placeholder="0"/>
       </Form.Item>  
       <Button type="primary" htmlType="submit" id='add-button'>Add new transaction</Button>
     </Form>

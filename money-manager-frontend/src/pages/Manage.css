@@ -33,6 +33,7 @@ nav {
   height: 54px;
   background-color: #FFFFFF;
   border-bottom: 1px solid #D2D2D2;
+  z-index: 1;
 }
 
 #subnav {

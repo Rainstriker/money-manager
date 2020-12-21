@@ -21,11 +21,59 @@
   margin: 5px 0px;
 }
 
-.content {
-  margin: 10px 0px;
-  padding-left: 10px;
+.color-Food {
+  background-color:#17B774;
 }
 
+.color-Social {
+  background-color:#0085FF;
+}
+
+.color-Household {
+  background-color:#41CFB6;
+}
+
+.color-Transportation {
+  background-color:#FF7A00;
+}
+
+.color-Entertainment {
+  background-color:#D13593;
+}
+
+.color-Health {
+  background-color:#E02D22;
+}
+
+.color-Apparel {
+  background-color:#C1A12E;
+}
+
+.color-Education {
+  background-color:#3AC1C1;
+}
+
+.color-Beauty {
+  background-color:#E16BF4;
+}
+
+.category-text {
+  min-width: 85px;
+  height: 100%;
+  color: #ffffff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+}
+
+.content {
+  margin: 16px 0;
+  font-size: 12px;
+}
+.content-name {
+  margin: 10px 0px 10px 25px;
+  font-size: 18px;
+}
 .amount {
   width: 100%;
   display: flex;
@@ -81,11 +129,6 @@
 
 .minus {
   color: #f26e41;
-}
-
-#transaction {
-  font-weight: 600;
-  font-size: 16px;
 }
 
 .remove {

@@ -115,7 +115,7 @@ const UpdateUser = props => {
           },
         ]}
       >
-        <Input />
+        <Input defaultValue={props.name}/>
       </Form.Item>
       <Form.Item {...tailFormItemLayout}>
         <Button type="primary" htmlType="submit">

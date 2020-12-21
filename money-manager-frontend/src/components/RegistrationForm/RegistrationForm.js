@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 import Backend from '../../util/Backend';
-
 import { withRouter } from 'react-router-dom';
-
 import 'antd/dist/antd.css';
 import {
   Form,
